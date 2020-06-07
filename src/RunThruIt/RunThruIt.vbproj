@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E36F6563-19CC-473B-ACF3-41B1CBB41512}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>RunThruIt.My.MyApplication</StartupObject>
+    <RootNamespace>RunThruIt</RootNamespace>
+    <AssemblyName>RunThruIt</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>https://github.com/theryan722/RunThruIt</SupportUrl>
+    <ProductName>RunThruIt</ProductName>
+    <PublisherName>Ryan O%27Day</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.5.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RunThruIt.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RunThruIt.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\..\..\DLLS\Organized\MetroFramework-winforms-modernui\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\..\..\..\..\..\DLLS\Organized\MetroFramework-winforms-modernui\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Controls\ctrl_logitem.Designer.vb">
+      <DependentUpon>ctrl_logitem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Controls\ctrl_logitem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\Controls\ctrl_shoeitem.Designer.vb">
+      <DependentUpon>ctrl_shoeitem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Controls\ctrl_shoeitem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\InjuryManager.vb" />
+    <Compile Include="Classes\Trackers\LogManager.vb" />
+    <Compile Include="Classes\Objects\Shoe.vb" />
+    <Compile Include="Classes\RandomInfo.vb" />
+    <Compile Include="Classes\Trackers\ShoeManager.vb" />
+    <Compile Include="Classes\Tabs.vb" />
+    <Compile Include="Classes\Website.vb" />
+    <Compile Include="Classes\Objects\Workout.vb" />
+    <Compile Include="Forms\Dialogs\dlgFirstTime.Designer.vb">
+      <DependentUpon>dlgFirstTime.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\dlgFirstTime.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\Shoe\dlgNewShoe.Designer.vb">
+      <DependentUpon>dlgNewShoe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\Shoe\dlgNewShoe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\dlgRandom.Designer.vb">
+      <DependentUpon>dlgRandom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\dlgRandom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\Log\dlgNewLog.Designer.vb">
+      <DependentUpon>dlgNewLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\Log\dlgNewLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\Log\dlgViewLog.Designer.vb">
+      <DependentUpon>dlgViewLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\Log\dlgViewLog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dialogs\Shoe\dlgViewShoe.Designer.vb">
+      <DependentUpon>dlgViewShoe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dialogs\Shoe\dlgViewShoe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmManager.Designer.vb">
+      <DependentUpon>frmManager.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_About.Designer.vb">
+      <DependentUpon>Tab_About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_Goals.Designer.vb">
+      <DependentUpon>Tab_Goals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_Goals.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_Log.Designer.vb">
+      <DependentUpon>Tab_Log.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_Log.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_OtherTrackers.Designer.vb">
+      <DependentUpon>Tab_OtherTrackers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_OtherTrackers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_Profile.Designer.vb">
+      <DependentUpon>Tab_Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_Shoes.Designer.vb">
+      <DependentUpon>Tab_Shoes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_Shoes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_Welcome.Designer.vb">
+      <DependentUpon>Tab_Welcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Tabs\Tab_Welcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Classes\Controls\ctrl_logitem.resx">
+      <DependentUpon>ctrl_logitem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\Controls\ctrl_shoeitem.resx">
+      <DependentUpon>ctrl_shoeitem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\dlgFirstTime.resx">
+      <DependentUpon>dlgFirstTime.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\Shoe\dlgNewShoe.resx">
+      <DependentUpon>dlgNewShoe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\dlgRandom.resx">
+      <DependentUpon>dlgRandom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\Log\dlgNewLog.resx">
+      <DependentUpon>dlgNewLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\Log\dlgViewLog.resx">
+      <DependentUpon>dlgViewLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dialogs\Shoe\dlgViewShoe.resx">
+      <DependentUpon>dlgViewShoe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmManager.resx">
+      <DependentUpon>frmManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tabs\Tab_About.resx">
+      <DependentUpon>Tab_About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tabs\Tab_Goals.resx">
+      <DependentUpon>Tab_Goals.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tabs\Tab_Log.resx">
+      <DependentUpon>Tab_Log.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tabs\Tab_OtherTrackers.resx">
+      <DependentUpon>Tab_OtherTrackers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tabs\Tab_Profile.resx">
+      <DependentUpon>Tab_Profile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tabs\Tab_Shoes.resx">
+      <DependentUpon>Tab_Shoes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tabs\Tab_Welcome.resx">
+      <DependentUpon>Tab_Welcome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+    <None Include="Resources\profile_128.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

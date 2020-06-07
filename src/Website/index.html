@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RunThruIt</title>
+    <meta name="description" content="Workout Feed">
+    <meta name="author" content="Ryan O'Day">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+<script>
+window.onload = function() {
+  getList();
+};
+</script>
+  </head>
+  <body>
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2>
+					<center><img src="img/runthruit_textlogo_350.png" height="100" width="350"></center>
+				</h2>
+				<p>
+					<center><a class="btn btn-primary btn-large" target="_blank" href="https://github.com/theryan722/RunThruIt/releases">Download</a></center>
+				</p>
+			</div>
+			<center><h1>Public Workout Feed<h1></center>
+			<div id ="feed"></div>
+			
+			<p class="text-center">
+				Copyright 2016 Ryan O'Day. Developed for Hoya Hacks 2016.
+			</p>
+		</div>
+	</div>
+</div>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/feed.js"></script>
+  </body>
+</html>
